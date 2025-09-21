@@ -1,36 +1,69 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Music Playlist
 
-## Getting Started
+A simple web application to manage and play music playlists. Built with **Next.js**, **Supabase**, and **TypeScript**.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## Table of Contents
+
+- [Features](#features)   
+- [Setup](#setup)  
+- [Running the App](#running-the-app)  
+- [Demo Account](#demo-account)
+
+---
+
+## Features
+
+- Create playlists  
+- Add tracks to playlists  
+- Search for songs  
+- Play tracks directly in the browser  
+- Authentication with Supabase  
+
+---
+
+## Setup
+
+1. **Clone the repository**
+
+```
+git clone https://github.com/ChawankornT/musicplaylist.git
+cd musicplaylist
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. **Install dependencies**
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```
+npm install
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+3. **Setup environment variables**
 
-## Learn More
+- Copy the example file:  
+```
+cp .env.local.example .env.local
+```
 
-To learn more about Next.js, take a look at the following resources:
+- Open `.env.local` and set the values:  
+```
+NEXT_PUBLIC_SUPABASE_URL=https://bfepfltqebtktpyxcvlm.supabase.co
+NEXT_PUBLIC_SUPABASE_ANON_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJmZXBmbHRxZWJ0a3RweXhjdmxtIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTgyMTAyNzQsImV4cCI6MjA3Mzc4NjI3NH0.oD4qznvR0Y5cHiVdMVQMjbB2JUpazJicmuoLFV0hNQ8
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Running the App
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+1. **Start the development server**
 
-## Deploy on Vercel
+```
+npm run dev
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+2. **Open [http://localhost:3000](http://localhost:3000) in your browser.**
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Demo Account
+
+You can log in using the demo account:
+- **Email**: demo@demo.com
+- **Password**: demo
+> This account is for testing purposes only.
