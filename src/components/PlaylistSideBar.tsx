@@ -69,7 +69,7 @@ export default function PlaylistSideBar({
   };
 
   return (
-    <aside className="w-64 h-full p-4 bg-teal-100 shadow-lg">
+    <aside className="w-64 h-full p-4 bg-teal-100">
       <div className="flex items-center">
         <h3 className="font-semibold">Playlists</h3>
         <div>
@@ -81,7 +81,7 @@ export default function PlaylistSideBar({
           </button>
         </div>
       </div>
-      <div className="flex flex-col  ml-2 mt-2  shadow-md rounded-md">
+      <div className="flex flex-col ml-2 mt-2 p-1 bg-teal-500 shadow-xl rounded-md">
         {playLists.map((p) => (
           <button
             key={p.id}
@@ -89,8 +89,10 @@ export default function PlaylistSideBar({
               onSelectPlaylist(p);
               setSelectedId(p.id);
             }}
-            className={`text-left p-2 cursor-pointer ${
-              selectedId === p.id ? "bg-gray-300" : "bg-teal-500"
+            className={`text-left p-2 cursor-pointer rounded-sm ${
+              selectedId === p.id
+                ? "bg-gray-300"
+                : "bg-teal-500 hover:bg-teal-600"
             }`}
           >
             {p.name}

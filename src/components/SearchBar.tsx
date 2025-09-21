@@ -4,10 +4,17 @@ import { useState } from "react";
 
 export default function SearchBar({
   onSearch,
+  onChange,
 }: {
   onSearch: (name: string) => void;
+  onChange?: (name: string) => void;
 }) {
   const [name, setName] = useState("");
+
+  const handleChange = (value: string) => {
+    setName(value);
+    onChange?.(value);
+  };
 
   return (
     <form
@@ -19,7 +26,7 @@ export default function SearchBar({
     >
       <input
         value={name}
-        onChange={(e) => setName(e.target.value)}
+        onChange={(e) => handleChange(e.target.value)}
         placeholder="ค้นหาเพลงหรือศิลปิน"
         className="input px-3 py-2 border border-gray-300 rounded-md w-full bg-white"
       />
